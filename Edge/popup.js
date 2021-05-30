@@ -1,7 +1,7 @@
 async function getLocalStorageValue(key) {
     return new Promise((resolve, reject) => {
         try {
-            browser.storage.sync.get(key, function (value) {
+            chrome.storage.sync.get(key, function (value) {
                 resolve(value);
             })
         }
