@@ -27,5 +27,5 @@
         "256": "/images/256.png",
         "512": "/images/512.png"
     },
-    "permissions": ["tabs", "storage"]
+    "permissions": ["tabs", "storage", "alarms"]
 }

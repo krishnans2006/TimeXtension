@@ -1,10 +1,3 @@
-chrome.storage.sync.get(["domains"], function(result) {
-    let array = result["domains"] ? result["domains"] : [];
-    for (let i = 0; i < array.length; i++) {
-        document.getElementById("list").innerHTML += array[i] + "\n"
-    }
-})
-
 async function getLocalStorageValue(key) {
     return new Promise((resolve, reject) => {
         try {
