@@ -20,7 +20,7 @@ function get_url() {
     })
 }
 
-chrome.storage.sync.set({productive: 5});
-chrome.storage.sync.set({unproductive: 7});
+chrome.storage.sync.set({productive: 15});
+chrome.storage.sync.set({unproductive: 1});
 chrome.storage.sync.set({unknown: 3});
 setInterval(get_url, 10000);
