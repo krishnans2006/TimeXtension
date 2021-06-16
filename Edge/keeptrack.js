@@ -28,6 +28,20 @@ function get_url() {
     })
 }
 
+chrome.storage.sync.get(null, function(result) {
+    if (!result["productive"]) {
+        result["productive"] = 0;
+    }
+    if (!result["unproductive"]) {
+        result["unproductive"] = 0;
+    }
+    if (!result["unknown"]) {
+        result["unknown"] = 0;
+    }
+    chrome.storage.sync.set(result, function () {
+    })
+})
+
 chrome.alarms.create({ periodInMinutes: 1 });
 chrome.alarms.onAlarm.addListener(() => {
     get_url()
